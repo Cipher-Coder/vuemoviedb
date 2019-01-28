@@ -38,4 +38,12 @@ export default {
 </script>
 
 <style scoped>
+ul {
+  display: grid;
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  grid-row-gap: 1rem;
+  grid-template-columns: repeat(6, 1fr);
+}
 </style>

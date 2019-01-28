@@ -1,22 +1,16 @@
 <template>
-  <div id="app"  v-if="status === 'Ready'">
-    <Header :title="title" />
-    <img alt="Vue logo" src="./assets/logo.png">
-    <h1>{{ hello }}</h1>
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div id="app" v-if="status === 'Ready'">
+    <Header :title="title"/>
+    <MoviesList/>
   </div>
-  <div v-else-if="status === 'Loading'">
-    Loading...
-  </div>
-  <div v-else>
-    Error!...
-  </div>
+  <div v-else-if="status === 'Loading'">Loading...</div>
+  <div v-else>Error!...</div>
 </template>
 
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 import Header from "./components/Header.vue";
+import MoviesList from "./components/MoviesList.vue";
 
 export default {
   name: "app",
@@ -25,11 +19,11 @@ export default {
       hello: "Hello World",
       title: "Vue Movie DB",
       isTrue: true,
-      status: 'Ready'
+      status: "Ready"
     };
   },
   components: {
-    HelloWorld,
+    MoviesList,
     Header
   }
 };

@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import MoviesList from "./components/MoviesList.vue";
+import MovieDetail from "@/components/MovieDetail";
 
 Vue.use(Router);
 
@@ -11,6 +12,11 @@ export default new Router({
       path: "/",
       name: "Movies List",
       component: MoviesList
+    },
+    {
+      path: "/movie/:id",
+      name: "Movies Detail",
+      component: MovieDetail
     }
   ]
 });

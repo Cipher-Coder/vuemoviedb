@@ -13,7 +13,7 @@ export default {
   name: "app",
   data() {
     return {
-      title: "Vue Movie DB"
+      title: "My Movie Database"
     };
   },
   components: {
